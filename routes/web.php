@@ -23,6 +23,11 @@ Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name(
 Route::match(['get', 'post'], '/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout']);
 
+Route::match(['get', 'post'], '/verify', [AuthController::class, 'verify'])->name('verify');
+Route::match(['get', 'post'],'/forgot-password', [AuthController::class, 'forgotPassword'])->name('forgot');
+Route::match(['get', 'post'],'/change-password', [AuthController::class, 'changePassword'])->name('change-password');
+
+
 //forgot password
 //activate email
 
